@@ -13,8 +13,8 @@ def load_data(filepath):
 
 def get_most_frequent_words(text, counter):
     regular = compile("\w+")
-    result = findall(regular, text)
-    word = Counter(result)
+    clean_terxt = findall(regular, text)
+    word = Counter(clean_terxt)
     return word.most_common(counter)
 
 
