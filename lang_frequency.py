@@ -2,8 +2,7 @@ import sys
 from collections import Counter
 from os.path import exists, isfile
 from re import compile, findall
-
-COUNT_FREQUENCY = 10
+from config import count_out_words
 
 
 def load_data(filepath):
@@ -11,18 +10,27 @@ def load_data(filepath):
         return opened_file.read()
 
 
-def get_most_frequent_words(text, counter):
-    regular = compile("\w+")
-    clean_terxt = findall(regular, text)
-    word = Counter(clean_terxt)
-    return word.most_common(counter)
+def get_most_frequent_words(text, count_words):
+    find_words = findall("\w+", text)
+    words = Counter(find_words)
+    return words.most_common(count_words)
+
+
+def print_top_words(words):
+    for word in words:
+        print(
+            "Word = {0}, Count={1}".format(word[0], word[1])
+        )
 
 
 if __name__ == '__main__':
     file_path = sys.argv[1]
     if exists(file_path) and isfile(file_path):
-        text = load_data(file_path).lower()
-        frequency_word_ten = get_most_frequent_words(text, COUNT_FREQUENCY)
-        print(frequency_word_ten)
+        file_data = load_data(file_path).lower()
+        top_frequency_words = get_most_frequent_words(
+            file_data,
+            count_out_words
+        )
+        print_top_words(top_frequency_words)
     else:
         print("The file doesn't exist!")
