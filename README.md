@@ -10,16 +10,7 @@ Example of script launch on Linux, Python 3.5:
 
 $ python lang_frequency.py <path to file>
 Example output:
-Word = a, Count=16
-Word = and, Count=14
-Word = the, Count=10
-Word = in, Count=9
-Word = questions, Count=9
-Word = to, Count=9
-Word = of, Count=7
-Word = for, Count=6
-Word = vote, Count=4
-Word = by, Count=4
+'в' = 12, 'и' = 11, 'не' = 9, 'что' = 5, 'по' = 4, 'на' = 4, 'от' = 4, 'рассказа' = 3, 'рассказ' = 3, 'указан' = 3
 ```
 
 # Project Goals
