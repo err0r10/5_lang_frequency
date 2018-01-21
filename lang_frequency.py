@@ -10,17 +10,15 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
+    count_words = 10
     find_words = findall("\w+", text)
     words = Counter(find_words)
-    return words.most_common(10)
+    return words.most_common(count_words)
 
 
 def print_top_words(words):
     for word in words:
-        print(
-            "'{0}' = {1}".format(word[0], word[1]),
-            end=", "
-        )
+        print("'{0}' = {1}".format(word[0], word[1]), end=", ")
 
 
 if __name__ == "__main__":
