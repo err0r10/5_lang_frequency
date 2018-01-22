@@ -18,14 +18,14 @@ def get_most_frequent_words(text):
 
 def print_top_words(words):
     for word in words:
-        print("'{0}' = {1}".format(*word), end=", ")
+        print("'{0}' = {1}".format(*word))
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 2 or not exists(sys.argv[1]):
         sys.exit("The file doesn't exist!")
     file_path = sys.argv[1]
-    if exists(file_path) and isfile(file_path):
+    if isfile(file_path):
         file_data = load_data(file_path).lower()
         top_frequency_words = get_most_frequent_words(file_data)
         print_top_words(top_frequency_words)
