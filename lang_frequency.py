@@ -18,7 +18,7 @@ def get_most_frequent_words(text):
 
 def print_top_words(words):
     for word in words:
-        print("'{0}' = {1}".format(*word))
+        print("{0:20} : {1}".format(*word))
 
 
 if __name__ == "__main__":

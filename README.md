@@ -10,7 +10,17 @@ Example of script launch on Linux, Python 3.5:
 
 $ python lang_frequency.py <path to file>
 Example output:
-'в' = 12, 'и' = 11, 'не' = 9, 'что' = 5, 'по' = 4, 'на' = 4, 'от' = 4, 'рассказа' = 3, 'рассказ' = 3, 'указан' = 3
+python               : 6
+не                   : 6
+на                   : 6
+в                    : 5
+и                    : 5
+к                    : 4
+по                   : 3
+лучше                : 3
+можно                : 3
+еще                  : 3
+
 ```
 
 # Project Goals
